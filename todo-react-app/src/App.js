@@ -40,9 +40,8 @@ class App extends React.Component {
         return (
             <div className="App" >
                 <Container maxWidth="md">
-                    <AddTodo add={this.add}>
-                        <div className="TodoList">{todoItems}</div>
-                    </AddTodo>
+                    <AddTodo add={this.add} />
+                    <div className="TodoList">{todoItems}</div>
                 </Container>
             </div>
         );
