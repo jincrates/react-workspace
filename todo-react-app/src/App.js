@@ -1,6 +1,7 @@
 import React from 'react';
-import Todo from './Todo';
-import { Paper, List } from "@material-ui/core";
+import Todo from './Todo.js';
+import AddTodo from './AddTodo.js';
+import { Paper, List, Container } from "@material-ui/core";
 import './App.css';
 
 class App extends React.Component {
@@ -28,7 +29,14 @@ class App extends React.Component {
         );
         
         //3. 생성된 컴포넌트 리턴
-        return <div className="App">{todoItems}</div>;
+        return (
+            <div className="App">
+                <Container maxWidth="md">
+                    <AddTodo />
+                    <div className="TodoList">{todoItems}</div>
+                </Container>    
+            </div>
+        );
     }
 }
 
