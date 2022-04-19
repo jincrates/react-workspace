@@ -32,7 +32,7 @@ class Todo extends React.Component {
     enterKeyEventHandler = (e) => {
         if (e.key === "Enter") {
             this.setState({ readOnly: true });
-            this.update(this.state,item);   //엔터를 누르면 저장
+            this.update(this.state.item);   //엔터를 누르면 저장
         }
     };
 

@@ -10,18 +10,16 @@ class App extends React.Component {
         super(props);
         this.state = {
             //1-1. item -> items 배열로
-            items: [
-                { id: "ID-0", title: "Hello React", done: true },
-            ],
+            items: [],
         };
     }
 
     //2-1. 함수 추가
     componentDidMount() {
-        call("/todo", "GET", null).then((response) => 
-            this.setState({ item: response.data })
+        call("/todo", "GET", null).then((response) =>
+          this.setState({ items: response.data })
         );
-    }
+      }
 
     add = (item) => {
         call("/todo", "POST", item).then((response) => 
