@@ -30,9 +30,15 @@ class App extends React.Component {
     };
 
     delete = (item) => {
-        call("/todo", "DELETE", item).then((response) => {
+        call("/todo", "DELETE", item).then((response) => 
             this.setState({ item: response.data })
-        });
+        );
+    };
+
+    update = (item) => {
+        call("/todo", "PUT", item).then((response) => 
+            this.setState({ item: response.data })
+        );
     };
 
     render() {
