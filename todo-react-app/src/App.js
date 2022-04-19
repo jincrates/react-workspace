@@ -51,6 +51,7 @@ class App extends React.Component {
                             item={item} 
                             key={item.id} 
                             delete={this.delete} 
+                            update={this.update}
                         />
                     ))}
                 </List>
