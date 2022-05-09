@@ -25,6 +25,7 @@ class AppRouter extends React.Component {
                             <Route path="/" element={<App />} />
                         </Routes>
                     </div>
+                    <br />
                     <Box mt={5}>
                         <Copyright />
                     </Box>
